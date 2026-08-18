@@ -3,7 +3,7 @@ const CONFIG = {
   NOBELIUM_COLOR_PRIMARY: '#6b7280',
 
   // 特殊菜单
-  NOBELIUM_MENU_RANDOM_POST: true, // 是否显示随机跳转文章按钮
+  NOBELIUM_MENU_RANDOM_POST: false, // 是否显示随机跳转文章按钮
   NOBELIUM_MENU_SEARCH_BUTTON: true, // 是否显示搜索按钮，该按钮支持Algolia搜索
   NOBELIUM_MENU_DARKMODE_BUTTON: true, // 菜单显示深色模式切换
 
