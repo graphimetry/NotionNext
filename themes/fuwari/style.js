@@ -17,8 +17,8 @@ const Style = () => {
     }
 
     .dark #theme-fuwari {
-      --fuwari-bg: #0d1117;
-      --fuwari-bg-soft: #171f2c;
+      --fuwari-bg: #0a0d12;
+      --fuwari-bg-soft: #141a25;
       --fuwari-surface: #171f2c;
       --fuwari-muted: #8095b8;
       --fuwari-text: #f3f4f6;
