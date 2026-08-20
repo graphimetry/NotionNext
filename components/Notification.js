@@ -42,7 +42,7 @@ const useNotification = () => {
         <div
           className={`${isVisible && message ? 'opacity-100 ' : 'invisible opacity-0 bottom-0'} transition-opacity duration-200 max-w-3xl mx-auto flex items-center justify-between px-4 py-2 text-white rounded-lg shadow-lg`}
           style={{ backgroundColor: '#EF4D5B' }}>
-          {message}
+          <span className="font-bold">{message}</span>
           <button
             onClick={closeNotification}
             className='ml-4 p-2 cursor-pointer bg-transparent text-white border-none'>
