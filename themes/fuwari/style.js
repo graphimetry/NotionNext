@@ -5,9 +5,9 @@ import { themeConsoleStyle } from '@/lib/themeConsoleStyle'
 const Style = () => {
   return <style jsx global>{`
     #theme-fuwari {
-      --fuwari-bg: #f3f4f8;
+      --fuwari-bg: #ffffff;
       --fuwari-bg-soft: #f6f4e8;
-      --fuwari-surface: #ffffff;
+      --fuwari-surface: #f6f4e8;
       --fuwari-muted: #72767d;
       --fuwari-text: #232a37;
       --fuwari-primary: #10b2a4;
@@ -18,9 +18,9 @@ const Style = () => {
 
     .dark #theme-fuwari {
       --fuwari-bg: #0d1117;
-      --fuwari-bg-soft: #131a25;
+      --fuwari-bg-soft: #171f2c;
       --fuwari-surface: #171f2c;
-      --fuwari-muted: #9ca3af;
+      --fuwari-muted: #8095b8;
       --fuwari-text: #f3f4f6;
       --fuwari-primary: #0b8379;
       --fuwari-primary-soft: rgba(11, 132, 122,0.3);
