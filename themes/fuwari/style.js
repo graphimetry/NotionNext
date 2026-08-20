@@ -10,10 +10,10 @@ const Style = () => {
       --fuwari-surface: #ffffff;
       --fuwari-muted: #72767d;
       --fuwari-text: #232a37;
-      --fuwari-primary: #b8a320;
-      --fuwari-primary-soft: rgba(184, 163, 32, 0.14);
-      --fuwari-border: #e9e8df;
-      --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 70%, #ffffff) 100%);
+      --fuwari-primary: #10B2A4;
+      --fuwari-primary-soft: rgba(16, 178, 164, 0.14);
+      --fuwari-border: #bef3d4;
+      --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 90%, #ffffff) 100%);
     }
 
     .dark #theme-fuwari {
@@ -22,10 +22,10 @@ const Style = () => {
       --fuwari-surface: #171f2c;
       --fuwari-muted: #9ca3af;
       --fuwari-text: #f3f4f6;
-      --fuwari-primary: #d3bf53;
-      --fuwari-primary-soft: rgba(211, 191, 83, 0.2);
+      --fuwari-primary: #0b8379;
+      --fuwari-primary-soft: rgba(11, 132, 122,0.3);
       --fuwari-border: #283446;
-      --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 70%, #ffffff) 100%);
+      --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 90%, #ffffff) 100%);
     }
 
     #theme-fuwari.fuwari-bg {
