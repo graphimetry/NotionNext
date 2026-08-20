@@ -30,13 +30,13 @@ const Style = () => {
 
     #theme-fuwari.fuwari-bg {
       background:
-        radial-gradient(circle at 10% -10%, var(--fuwari-primary-soft) 0, transparent 45%),
-        radial-gradient(circle at 100% 10%, rgba(122, 199, 255, 0.14) 0, transparent 35%),
+        radial-gradient(circle at 10% -10%, var(--fuwari-primary-soft) 0, transparent 55%),
+        radial-gradient(circle at 100% 10%, rgba(122, 199, 255, 0.14) 0, transparent 45%),
         var(--fuwari-bg);
     }
 
     #theme-fuwari {
-      transition: background-color 0.2s ease, color 0.2s ease;
+      transition: background-color 0.4s ease, color 0.4s ease;
       overflow-x: clip;
     }
 
@@ -45,7 +45,7 @@ const Style = () => {
       border: 1px solid var(--fuwari-border);
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     #theme-fuwari .fuwari-card-hover:hover {
@@ -55,7 +55,7 @@ const Style = () => {
 
     #theme-fuwari .fuwari-cover-wrap {
       overflow: hidden;
-      border-radius: 16px;
+      border-radius: 40px;
     }
 
     #theme-fuwari .fuwari-cover-wrap img {
