@@ -55,7 +55,7 @@ const Style = () => {
 
     #theme-fuwari .fuwari-cover-wrap {
       overflow: hidden;
-      border-radius: 40px;
+      border-radius: 16px;
     }
 
     #theme-fuwari .fuwari-cover-wrap img {
@@ -65,7 +65,7 @@ const Style = () => {
       padding: .95rem;
     }
     #theme-fuwari .fuwari-profile-link {
-      border-radius: 1rem;
+      border-radius: 2.5rem;
       overflow: hidden;
     }
     #theme-fuwari .fuwari-profile-thumb {
