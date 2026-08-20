@@ -34,7 +34,7 @@ const CONFIG = {
   /** 卡片内显示标签 */
   FUWARI_POST_LIST_TAG: true,
   /** 桌面端列表卡片封面列宽度（px），增大则更扁长横向 */
-  FUWARI_POST_LIST_COVER_COL_WIDTH: 252,
+  FUWARI_POST_LIST_COVER_COL_WIDTH: 230,
 
   // ---------------------------------------------------------------------------
   // 移动端
