@@ -10,9 +10,9 @@ const Style = () => {
       --fuwari-surface: #faf9f2;
       --fuwari-muted: #5c8183;
       --fuwari-text: #232a37;
-      --fuwari-primary: #0fa89a;
+      --fuwari-primary: #f4f1e2;
       --fuwari-primary-soft: rgba(16, 178, 164, 0.14);
-      --fuwari-border: #fdfdfa;
+      --fuwari-border: #fbfaf5;
       --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 90%, #ffffff) 100%);
     }
 
