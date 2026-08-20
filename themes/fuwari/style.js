@@ -22,7 +22,7 @@ const Style = () => {
       --fuwari-surface: #171f2c;
       --fuwari-muted: #9ca3af;
       --fuwari-text: #f3f4f6;
-      --fuwari-primary: #0b8379;
+      --fuwari-primary: #FF0000;
       --fuwari-primary-soft: rgba(11, 132, 122,0.3);
       --fuwari-border: #283446;
       --fuwari-gradient: linear-gradient(135deg, var(--fuwari-primary) 0%, color-mix(in oklab, var(--fuwari-primary) 90%, #ffffff) 100%);
