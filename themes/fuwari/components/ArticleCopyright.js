@@ -60,7 +60,7 @@ const ArticleCopyright = ({ post }) => {
           {locale?.COMMON?.AUTHOR || 'Author'}:
         </span>
         <SmartLink href={profileHref} className='fuwari-link'>
-          {authorname}
+          {authorName}
         </SmartLink>
       </div>
       <div className='mt-1'>
