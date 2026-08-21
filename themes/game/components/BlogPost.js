@@ -13,11 +13,11 @@ const BlogPost = ({ post }) => {
     <SmartLink href={post?.href}>
       <article key={post.id} className='mb-6 md:mb-8'>
         <header className='flex flex-col justify-between md:flex-row md:items-baseline'>
-          <h2 className='text-lg md:text-xl font-bold font-serif mb-2 cursor-pointer text-black dark:text-gray-500'>
+          <h2 className='text-lg md:text-xl font-serif mb-2 cursor-pointer text-black dark:text-gray-500'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
-            <span style={{ fontFamily: "Noto Serif, 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif" }}>{post.title}</span>
+            <span style={{ fontFamily: "Noto Serif, 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif", fontWeight: 500 }}>{post.title}</span>
           </h2>
           <time className='flex-shrink-0 text-gray-600 dark:text-gray-400'>
             {post?.publishDay}
