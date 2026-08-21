@@ -81,7 +81,7 @@ const SidePanel = props => {
               <SmartLink
                 key={p.id}
                 href={p.href || `/${p.slug}`}
-                className='block text-sm leading-6 hover:text-[var(--fuwari-primary)]'>
+                className='block text-sm font-bold font-serif leading-6 hover:text-[var(--fuwari-primary)]'>
                 {p.title}
               </SmartLink>
             ))}
