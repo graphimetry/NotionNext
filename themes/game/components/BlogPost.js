@@ -17,7 +17,7 @@ const BlogPost = ({ post }) => {
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
-            {post.title}
+            <span style={{ fontFamily: "Noto Serif, 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif" }}>{post.title}</span>
           </h2>
           <time className='flex-shrink-0 text-gray-600 dark:text-gray-400'>
             {post?.publishDay}
