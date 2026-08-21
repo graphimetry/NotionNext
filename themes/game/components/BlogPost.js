@@ -13,7 +13,7 @@ const BlogPost = ({ post }) => {
     <SmartLink href={post?.href}>
       <article key={post.id} className='mb-6 md:mb-8'>
         <header className='flex flex-col justify-between md:flex-row md:items-baseline'>
-          <h2 className='text-lg md:text-xl font-bold font-serif mb-2 cursor-pointer text-black dark:text-gray-100'>
+          <h2 className='text-lg md:text-xl font-bold font-serif mb-2 cursor-pointer text-black dark:text-gray-250'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
