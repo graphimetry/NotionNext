@@ -37,6 +37,14 @@ const ArticleHeader = ({ post }) => {
       <h1 className='text-3xl lg:text-4xl font-bold mb-3 leading-tight'>{post.title}</h1>
       {siteConfig('FUWARI_ARTICLE_META', true, CONFIG) && (
         <div className='text-sm text-[var(--fuwari-muted)] flex flex-wrap items-center gap-2'>
+          {post.author && (
+            <>
+              <SmartLink href={`/author/${encodeURIComponent(post.author)}`} className='fuwari-link'>
+                {post.author}
+              </SmartLink>
+              <span>·</span>
+            </>
+          )}
           <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
           {post.category && (
             <>
@@ -66,4 +74,3 @@ const ArticleHeader = ({ post }) => {
 }
 
 export default ArticleHeader
-
