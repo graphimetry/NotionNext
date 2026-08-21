@@ -128,7 +128,7 @@ const CONFIG = {
   /** 有 Notion 封面时，在详情页文章卡片内顶部展示封面图（object-cover，不占满屏） */
   FUWARI_ARTICLE_COVER_HERO: true,
   /** 文首：日期、分类、标签等元信息 */
-  FUWARI_ARTICLE_META: false,
+  FUWARI_ARTICLE_META: true,
   /** 分享条 */
   FUWARI_ARTICLE_SHARE: false,
   /** 文章版权声明：true 全部显示；false 全部关闭；custom 仅填写 copyright 时显示 */
