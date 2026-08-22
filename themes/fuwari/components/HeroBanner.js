@@ -39,13 +39,15 @@ const HeroBanner = ({ siteInfo }) => {
 
   if (!siteConfig('FUWARI_HERO_ENABLE', true, CONFIG)) return null
 
-  // 根据主题选择背景图片
+  // 根据主题选择背景图片 - 提升优先级
   const lightModeImage = 'https://i.ibb.co/DDDxY7Ly/syaro.png'
   const darkModeImage = 'https://i.ibb.co/4hRsZ7b/water-dispenser.png'
+  const themeBasedCover = isDark ? darkModeImage : lightModeImage
 
   const cover =
+    themeBasedCover ||
     siteInfo?.pageCover ||
-    (isDark ? darkModeImage : lightModeImage) ||
+    siteConfig('FUWARI_HERO_BG_IMAGE', '', CONFIG) ||
     siteConfig('HOME_BANNER_IMAGE')
 
   return (
