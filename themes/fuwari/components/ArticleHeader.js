@@ -48,19 +48,18 @@ const ArticleHeader = ({ post }) => {
     )}
     <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
     
-    {(post.wordCount || post.readTime) && (
-      <>
-        <span>·</span>
-        <WordCount wordCount={post.wordCount} readTime={post.readTime} />
-      </>
-    )}
-    
     {post.category && (
       <>
         <span>·</span>
         <SmartLink href={`/category/${encodeURIComponent(post.category)}`} className='fuwari-link'>
           {post.category}
         </SmartLink>
+      </>
+    )}
+
+    {(post.wordCount || post.readTime) && (
+      <>
+        <WordCount wordCount={post.wordCount} readTime={post.readTime} />
       </>
     )}
     
