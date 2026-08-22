@@ -36,7 +36,7 @@ const ArticleLock = ({ validPassword }) => {
           value={password}
           onChange={e => setPassword(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && submitPassword()}
-          className='flex-1 rounded-l-xl border border-[var(--fuwari-border)] bg-[var(--fuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[#EF4D5B]'
+          className='flex-1 rounded-l-xl border border-[var(--fuwari-border)] bg-[var(--fuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[var(--fuwari-primary)]'
           placeholder={locale?.COMMON?.INPUT_PASSWORD || '请输入访问密码'}
         />
         <button
@@ -47,10 +47,9 @@ const ArticleLock = ({ validPassword }) => {
         </button>
       </div>
 
-      {!!error && <p className='text-red-500 text-sm mt-3'>{error}</p>}
+      {!!error && <p className='font-bold text-sm mt-3' style={{ color: '#EF4D5B' }}>{error}</p>}
     </div>
   )
 }
 
 export default ArticleLock
-
