@@ -606,9 +606,13 @@ const Style = () => {
       to { opacity: 1; transform: none; }
     }
 
+    /* ArticleLock input focus style override */
+    #theme-fuwari .fuwari-card input[type="password"]:focus {
+      border-color: #EF4D5B !important;
+    }
+
       ${themeConsoleStyle('fuwari', CONFIG)}
   `}</style>
 }
 
 export { Style }
-
