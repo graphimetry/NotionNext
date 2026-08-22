@@ -37,46 +37,48 @@ const ArticleHeader = ({ post }) => {
     <header className='mb-6'>
       <h1 className='text-3xl lg:text-4xl font-bold font-serif mb-3 leading-tight'>{post.title}</h1>
       {siteConfig('FUWARI_ARTICLE_META', true, CONFIG) && (
-  <div className='text-sm text-[var(--fuwari-muted)] flex flex-wrap items-center gap-2'>
-    {post.author && (
-      <>
-        <SmartLink href={`/author/${encodeURIComponent(post.author)}`} className='fuwari-link'>
-          {post.author}
-        </SmartLink>
-        <span>·</span>
-      </>
-    )}
-    <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
-    
-    {post.category && (
-      <>
-        <span>·</span>
-        <SmartLink href={`/category/${encodeURIComponent(post.category)}`} className='fuwari-link'>
-          {post.category}
-        </SmartLink>
-      </>
-    )}
-
-    {(post.wordCount || post.readTime) && (
-      <>
-        <WordCount wordCount={post.wordCount} readTime={post.readTime} />
-      </>
-    )}
-    
-          {!!post.tagItems?.length && (
-            <>
-              <span>·</span>
-              {post.tagItems.slice(0, 4).map((tag, idx) => (
-                <SmartLink
-                  key={tag.name}
-                  href={`/tag/${encodeURIComponent(tag.name)}`}
-                  className='fuwari-link'>
-                  {idx > 0 ? ` / #${tag.name}` : `#${tag.name}`}
+        <>
+          <div className='text-sm text-[var(--fuwari-muted)] flex flex-wrap items-center gap-2'>
+            {post.author && (
+              <>
+                <SmartLink href={`/author/${encodeURIComponent(post.author)}`} className='fuwari-link'>
+                  {post.author}
                 </SmartLink>
-              ))}
-            </>
+                <span>·</span>
+              </>
+            )}
+            <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
+            
+            {post.category && (
+              <>
+                <span>·</span>
+                <SmartLink href={`/category/${encodeURIComponent(post.category)}`} className='fuwari-link'>
+                  {post.category}
+                </SmartLink>
+              </>
+            )}
+            
+            {!!post.tagItems?.length && (
+              <>
+                <span>·</span>
+                {post.tagItems.slice(0, 4).map((tag, idx) => (
+                  <SmartLink
+                    key={tag.name}
+                    href={`/tag/${encodeURIComponent(tag.name)}`}
+                    className='fuwari-link'>
+                    {idx > 0 ? ` / #${tag.name}` : `#${tag.name}`}
+                  </SmartLink>
+                ))}
+              </>
+            )}
+          </div>
+
+          {(post.wordCount || post.readTime) && (
+            <div className='text-sm text-[var(--fuwari-muted)] mt-2'>
+              <WordCount wordCount={post.wordCount} readTime={post.readTime} />
+            </div>
           )}
-        </div>
+        </>
       )}
     </header>
   )
