@@ -1,13 +1,51 @@
 import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import CONFIG from '../config'
+import { useEffect, useState } from 'react'
 
 const HeroBanner = ({ siteInfo }) => {
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    // 检测初始主题
+    const darkMode = document.documentElement.classList.contains('dark') || 
+                     window.matchMedia('(prefers-color-scheme: dark)').matches
+    setIsDark(darkMode)
+
+    // 监听主题变化
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    })
+
+    // 监听系统主题变化
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e) => {
+      if (!document.documentElement.classList.contains('dark')) {
+        setIsDark(e.matches)
+      }
+    }
+    mediaQuery.addEventListener('change', handleChange)
+
+    return () => {
+      observer.disconnect()
+      mediaQuery.removeEventListener('change', handleChange)
+    }
+  }, [])
+
   if (!siteConfig('FUWARI_HERO_ENABLE', true, CONFIG)) return null
+
+  // 根据主题选择背景图片
+  const lightModeImage = 'https://i.ibb.co/DDDxY7Ly/syaro.png'
+  const darkModeImage = 'https://i.ibb.co/4hRsZ7b/water-dispenser.png'
 
   const cover =
     siteInfo?.pageCover ||
-    siteConfig('FUWARI_HERO_BG_IMAGE', '', CONFIG) ||
+    (isDark ? darkModeImage : lightModeImage) ||
     siteConfig('HOME_BANNER_IMAGE')
 
   return (
@@ -35,4 +73,3 @@ const HeroBanner = ({ siteInfo }) => {
 }
 
 export default HeroBanner
-
