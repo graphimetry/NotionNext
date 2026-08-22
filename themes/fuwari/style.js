@@ -248,6 +248,9 @@ const Style = () => {
       transform: scale(1.01);
       filter: saturate(1.05);
     }
+    #theme-fuwari .fuwari-hero-bg-transition {
+      transition: background-image 0.6s ease;
+    }
     #theme-fuwari .fuwari-hero-mask {
       position: absolute;
       inset: 0;
