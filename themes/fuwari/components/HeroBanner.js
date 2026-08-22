@@ -54,7 +54,7 @@ const HeroBanner = ({ siteInfo }) => {
     <section className='fuwari-hero mb-4 overflow-hidden'>
       {cover && (
         <div
-          className='fuwari-hero-bg'
+          className='fuwari-hero-bg fuwari-hero-bg-transition'
           style={{ backgroundImage: `url(${cover})` }}
         />
       )}
