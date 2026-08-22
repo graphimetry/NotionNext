@@ -2,6 +2,7 @@ import SmartLink from '@/components/SmartLink'
 import { siteConfig } from '@/lib/config'
 import { useRouter } from 'next/router'
 import CONFIG from '../config'
+import WordCount from '@/components/WordCount'
 
 const getCurrentSearchQuery = router => {
   const queryString = router?.asPath?.split('?')[1]?.split('#')[0] || ''
@@ -36,24 +37,33 @@ const ArticleHeader = ({ post }) => {
     <header className='mb-6'>
       <h1 className='text-3xl lg:text-4xl font-bold font-serif mb-3 leading-tight'>{post.title}</h1>
       {siteConfig('FUWARI_ARTICLE_META', true, CONFIG) && (
-        <div className='text-sm text-[var(--fuwari-muted)] flex flex-wrap items-center gap-2'>
-          {post.author && (
-            <>
-              <SmartLink href={`/author/${encodeURIComponent(post.author)}`} className='fuwari-link'>
-                {post.author}
-              </SmartLink>
-              <span>·</span>
-            </>
-          )}
-          <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
-          {post.category && (
-            <>
-              <span>·</span>
-              <SmartLink href={`/category/${encodeURIComponent(post.category)}`} className='fuwari-link'>
-                {post.category}
-              </SmartLink>
-            </>
-          )}
+  <div className='text-sm text-[var(--fuwari-muted)] flex flex-wrap items-center gap-2'>
+    {post.author && (
+      <>
+        <SmartLink href={`/author/${encodeURIComponent(post.author)}`} className='fuwari-link'>
+          {post.author}
+        </SmartLink>
+        <span>·</span>
+      </>
+    )}
+    <SmartLink href={getArchiveHref(post.publishDay, router)} className='fuwari-link'>{post.publishDay}</SmartLink>
+    
+    {(post.wordCount || post.readTime) && (
+      <>
+        <span>·</span>
+        <WordCount wordCount={post.wordCount} readTime={post.readTime} />
+      </>
+    )}
+    
+    {post.category && (
+      <>
+        <span>·</span>
+        <SmartLink href={`/category/${encodeURIComponent(post.category)}`} className='fuwari-link'>
+          {post.category}
+        </SmartLink>
+      </>
+    )}
+    
           {!!post.tagItems?.length && (
             <>
               <span>·</span>
