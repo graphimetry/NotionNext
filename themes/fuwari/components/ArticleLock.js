@@ -5,6 +5,7 @@ const ArticleLock = ({ validPassword }) => {
   const { locale } = useGlobal()
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [focused, setFocused] = useState(false)
   const inputRef = useRef(null)
 
   useEffect(() => {
@@ -35,6 +36,8 @@ const ArticleLock = ({ validPassword }) => {
           type='password'
           value={password}
           onChange={e => setPassword(e.target.value)}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
           onKeyDown={e => e.key === 'Enter' && submitPassword()}
           className='flex-1 rounded-l-xl border-2 border-[var(--fuwari-border)] bg-[var(--fuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[#EF4D5B]'
           placeholder={locale?.COMMON?.INPUT_PASSWORD || '请输入访问密码'}
@@ -42,7 +45,12 @@ const ArticleLock = ({ validPassword }) => {
         <button
           type='button'
           onClick={submitPassword}
-          className='rounded-r-xl border-2 border-[var(--fuwari-border)] -ml-[2px] px-4 py-2 text-sm font-semibold text-white bg-[var(--fuwari-primary)] hover:opacity-90'>
+          className={
+            'rounded-r-xl border-2 -ml-[2px] px-4 py-2 text-sm font-semibold text-white bg-[var(--fuwari-primary)] hover:opacity-90 ' +
+            (focused
+              ? 'border-[#EF4D5B] border-l-[var(--fuwari-border)]'
+              : 'border-[var(--fuwari-border)]')
+          }>
           {locale?.COMMON?.SUBMIT || '提交'}
         </button>
       </div>
