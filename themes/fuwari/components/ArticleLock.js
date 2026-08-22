@@ -36,13 +36,13 @@ const ArticleLock = ({ validPassword }) => {
           value={password}
           onChange={e => setPassword(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && submitPassword()}
-          className='flex-1 rounded-l-xl border border-[var(--fuwari-border)] bg-[var(--fuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[#EF4D5B]'
+          className='flex-1 rounded-l-xl border-2 border-[var(--fuwari-border)] bg-[var(--fuwari-bg-soft)] px-4 py-2 text-sm outline-none focus:border-[#EF4D5B]'
           placeholder={locale?.COMMON?.INPUT_PASSWORD || '请输入访问密码'}
         />
         <button
           type='button'
           onClick={submitPassword}
-          className='rounded-r-xl px-4 py-2 text-sm font-semibold text-white bg-[var(--fuwari-primary)] hover:opacity-90'>
+          className='rounded-r-xl border-2 border-[var(--fuwari-border)] -ml-[2px] px-4 py-2 text-sm font-semibold text-white bg-[var(--fuwari-primary)] hover:opacity-90'>
           {locale?.COMMON?.SUBMIT || '提交'}
         </button>
       </div>
