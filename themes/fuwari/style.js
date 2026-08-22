@@ -59,7 +59,7 @@ const Style = () => {
     }
 
     #theme-fuwari .fuwari-cover-wrap img {
-      transition: transform 0.35s ease;
+      transition: transform 0.4s ease;
     }
     #theme-fuwari .fuwari-profile-card {
       padding: .95rem;
@@ -249,7 +249,7 @@ const Style = () => {
       filter: saturate(1.05);
     }
     #theme-fuwari .fuwari-hero-bg-transition {
-      transition: background-image 0.6s ease;
+      transition: background-image 0.4s ease;
     }
     #theme-fuwari .fuwari-hero-mask {
       position: absolute;
